@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
  * main-print all the data types
- *
- * code by mavine
+ *code by mavine 
+ *return: 0
 */
 int main(void)
 {
