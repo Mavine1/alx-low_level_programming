@@ -1,9 +1,11 @@
 #include <stdio.h>
+
 /**
  * main-print all the data types
  * code by mavine
- * return: 0
+ * return: Always 0 (success
 */
+
 int main(void)
 {
 	char a;
