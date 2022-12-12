@@ -3,7 +3,7 @@
 /**
  * main - prints alpha in lower case
  *
- * Return :always 0
+ * Return: Always 0
  */
 int main(void)
 {
