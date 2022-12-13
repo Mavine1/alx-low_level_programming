@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 /**
  *  main -main block
  *  description : write a program that prints all the possible numbers
@@ -8,31 +7,23 @@
  */
 int main(void)
 {
-	int c;
-	int d = 0;
+	int m;
+	int k;
 
-	while (d < 10)
+	for (m = 0; m <= 9; m++)
 	{
-		c = 0;
-		while (c < 10)
+		for (k = m + 1; k <= 9; k++)
 		{
-			if (d != c && d < c)
+			putchar(m + '0');
+                        putchar(k + '0');
+			if (m < 8)
 			{
-				putchar('0' + d);
-			        putchar ('0' + c);
-				
-				if (c + d != 17)
-				{
-				    putchar(',');
-			     	    putchar(' ');
-			          }
-		        }
-	 		
-			c++;
+				putchar(',');
+				putchar(',');
+			}
 		}
-		
-		d++;
-     		putchar('\n');
-		return (0);
 	}
+	putchar('\n');
+
+	return (0);
 }
