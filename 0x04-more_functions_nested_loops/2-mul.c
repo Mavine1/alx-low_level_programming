@@ -1,6 +1,6 @@
 include "main.h"
 /**
- * mul -function that multiples two numbers 
+ * mul -function that multiples two numbers
  * first bumber
  * second number
  */
