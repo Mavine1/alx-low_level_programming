@@ -1,27 +1,30 @@
-#include "main.h"                                                                                                                     
-                                                                                                                                      
-/**                                                                                                                                   
- * leet - Encodes a string to 1337.                                                                                                   
- * @str: The string to be encoded.                                                                                                    
- *                                                                                                                                    
- * Return: A pointer to the encoded string.                                                                                           
- */                                                                                                                                   
-char *leet(char *str)                                                                                                                 
-{                                                                                                                                     
-        int indx1 = 0, indx2;                                                                                                         
-        char leet[8] = {'O', 'L', '?', 'E', 'A', '?', '?', 'T'};                                                                      
-                                                                                                                                      
-        while (str[indx1])                                                                                                            
-        {                                                                                                                             
-                for (indx2 = 0; indx2 <= 7; indx2++)                                                                                  
-                {                                                                                                                     
-                        if (str[indx1] == leet[indx2] ||                                                                              
-                            str[indx1] - 32 == leet[indx2])                                                                           
-                                str[indx1] = indx2 + '0';                                                                             
-                }                                                                                                                     
-                                                                                                                                      
-                indx1++;                                                                                                              
-        }                                                                                                                             
-                                                                                                                                      
-        return (str);                                                                                                                 
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * rot13 - encoder rot13
+ * @s: pointer to string params
+ *
+ * Return: *s
+ */
+
+char *rot13(char *s)
+{
+	int i;
+	int j;
+	char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; j < 52; j++)
+		{
+			if (s[i] == data1[j])
+			{
+				s[i] = datarot[j];
+				break;
+			}
+		}
+	}
+	return (s);
 }

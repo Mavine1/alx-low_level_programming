@@ -1,21 +1,20 @@
-#include "main.h"                                                                                                                    
-                                                                                                                                     
-/**                                                                                                                                  
- * _strcmp - Compares pointers to two strings.                                                                                       
- * @s1: A pointer to the first string to be compared.                                                                                
- * @s2: A pointer to the second string to be compared.                                                                               
- *                                                                                                                                   
- * Return: If str1 < str2, the negative difference of the first unmatched char                                                       
- *         If str1 == str2, 0.                                                                                                       
- *         If str1 > str2, the positive difference of the first unmatched char                                                       
- */                                                                                                                                  
-int _strcmp(char *s1, char *s2)                                                                                                      
-{                                                                                                                                    
-        while (*s1 && *s2 && *s1 == *s2)                                                                                             
-        {                                                                                                                            
-                s1++;                                                                                                                
-                s2++;                                                                                                                
-        }                                                                                                                            
-                                                                                                                                     
-        return (*s1 - *s2);                                                                                                          
+#include "main.h"
+/**
+ * reverse_array - reverse array of integers
+ * @a: array
+ * @n: number of elements of array
+ *
+ * Return: void
+ */
+void reverse_array(int *a, int n)
+{
+	int i;
+	int t;
+
+	for (i = 0; i < n--; i++)
+	{
+		t = a[i];
+		a[i] = a[n];
+		a[n] = t;
+	}
 }
