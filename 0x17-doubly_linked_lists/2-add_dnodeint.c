@@ -1,30 +1,23 @@
+/*
+ * Author: Mavine Muganda
+ */
+
 #include "lists.h"
 
-/**
- *Mavine Muganda
- **/
-dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	dlistint_t *new, *aux = *head;
+	dlistint_t *new;
 
 	new = malloc(sizeof(dlistint_t));
 	if (new == NULL)
 		return (NULL);
-	new->n = n;
-	new->next = NULL;
 
-	if (aux)
-	{
-		while (aux->next)
-			aux = aux->next;
-		new->prev = aux;
-		aux->next = new;
-	}
-	else
-	{
-		*head = new;
-		new->prev = NULL;
-	}
+	new->n = n;
+	new->prev = NULL;
+	new->next = *head;
+	if (*head != NULL)
+		(*head)->prev = new;
+	*head = new;
 
 	return (new);
 }
