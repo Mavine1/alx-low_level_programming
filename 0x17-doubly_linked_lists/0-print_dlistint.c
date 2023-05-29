@@ -1,19 +1,19 @@
-/*
- * Author: Mavine Muganda
- */
-
 #include "lists.h"
 
+/**
+ * Author:Mavine MUganda
+ **/
 size_t print_dlistint(const dlistint_t *h)
 {
-	size_t nodes = 0;
+	const dlistint_t *node = h;
+	size_t cont = 0;
 
-	while (h)
+	while (node)
 	{
-		nodes++;
-		printf("%d\n", h->n);
-		h = h->next;
+		printf("%i\n", node->n);
+		cont++;
+		node = node->next;
 	}
 
-	return (nodes);
+	return (cont);
 }
